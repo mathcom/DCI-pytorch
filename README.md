@@ -1,6 +1,7 @@
 # DCI-pytorch
-The pytorch implementation of decoupling representation learning and classification for GNN-based anomaly detection (SIGIR 2021). We run on a DELL server with 2 * Intel(R) Xeon(R) Silver 4210, 4 * NVIDIA TITAN V (12G), 10 * 32GB DDR4 RAM and 1 * 8TB hard disk.
-See our [paper](https://dl.acm.org/doi/10.1145/3404835.3462944) for details on the algorithm.
+- The pytorch implementation of decoupling representation learning and classification for GNN-based anomaly detection (SIGIR 2021).
+- We run on a DELL server with 2 * Intel(R) Xeon(R) Silver 4210, 4 * NVIDIA TITAN V (12G), 10 * 32GB DDR4 RAM and 1 * 8TB hard disk.
+- See our [paper](https://dl.acm.org/doi/10.1145/3404835.3462944) for details on the algorithm.
 
 Abstract
 ====
@@ -15,12 +16,13 @@ In effect, the idea of decoupled training is not restricted to the anomaly detec
 
 If you make use of our idea in your work, please cite the following paper:
 ```
- @inproceedings{Wang2021decoupling,
-     author = {Yanling Wang and Jing Zhang and Shasha Guo and Hongzhi Yin and Cuiping Li and Hong Chen},
-     title = {Decoupling Representation Learning and Classification for GNN-based Anomaly Detection},
-     booktitle = {SIGIR},
-     year = {2021}
-   }
+@inproceedings{wang2021decoupling,
+  title={Decoupling representation learning and classification for gnn-based anomaly detection},
+  author={Wang, Yanling and Zhang, Jing and Guo, Shasha and Yin, Hongzhi and Li, Cuiping and Chen, Hong},
+  booktitle={Proceedings of the 44th international ACM SIGIR conference on research and development in information retrieval},
+  pages={1239--1248},
+  year={2021}
+}
 ```
 
 Installation
