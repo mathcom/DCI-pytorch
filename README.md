@@ -1,6 +1,6 @@
 # DCI-pytorch
 The pytorch implementation of decoupling representation learning and classification for GNN-based anomaly detection (SIGIR 2021). We run on a DELL server with 2 * Intel(R) Xeon(R) Silver 4210, 4 * NVIDIA TITAN V (12G), 10 * 32GB DDR4 RAM and 1 * 8TB hard disk.
-See our [paper](https://xiaojingzi.github.io/publications/SIGIR21-Wang-et-al-decoupled-GNN.pdf) for details on the algorithm.
+See our [paper](https://dl.acm.org/doi/10.1145/3404835.3462944) for details on the algorithm.
 
 Abstract
 ====
@@ -11,7 +11,7 @@ Decoupled training can alleviate the negative effects caused by the inconsistenc
 The proposed SSL scheme, called Deep cluster Infomax (DCI), can contribute to the decoupled training. 
 In effect, the idea of decoupled training is not restricted to the anomaly detection.
 
-<img src="https://github.com/wyl7/DCI-pytorch/blob/main/jointVsDecoupled.PNG" with="10">
+<img src="meta/jointVsDecoupled.PNG" with="10">
 
 If you make use of our idea in your work, please cite the following paper:
 ```
@@ -23,18 +23,11 @@ If you make use of our idea in your work, please cite the following paper:
    }
 ```
 
-Requirements
+Installation
 ====
-You can create a virtual environment first via:
+You can create a virtual environment for DCI using conda:
 ```
-conda create -n your_env_name python=3.8.5
-```
-
-You can install all the required tools using the following command:
-```
-# CUDA 10.2
-conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=10.2 -c pytorch
-$ pip install -r requirements.txt
+conda env create -f environment.yml
 ```
 
 Overview
