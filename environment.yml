@@ -1,0 +1,9 @@
+name: DCI
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - cudatoolkit=10.2
+  - pytorch::pytorch=1.12.*=*cuda*
+  - pytorch::torchvision
+  - scikit-learn
