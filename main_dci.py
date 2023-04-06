@@ -125,7 +125,7 @@ def main():
     edge_index, feats, split_idx, label, nb_nodes = load_data(args.dataset, args.num_folds)
     input_dim = feats.shape[1]
     # pre-clustering and store userID in each clusters
-    kmeans = KMeans(n_clusters=args.num_cluster, random_state=0).fit(feats)
+    kmeans = KMeans(n_clusters=args.num_cluster, random_state=0, n_init='auto').fit(feats) ## FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
     ss_label = kmeans.labels_
     cluster_info = [list(np.where(ss_label==i)[0]) for i in range(args.num_cluster)]
     # the shuffled features are used to contruct the negative sample-pairs
@@ -151,7 +151,7 @@ def main():
             if epoch % args.recluster_interval == 0 and epoch < args.epochs:
                 model_pretrain.eval()
                 emb = model_pretrain.get_emb(feats, adj)
-                kmeans = KMeans(n_clusters=args.num_cluster, random_state=0).fit(emb.detach().cpu().numpy())
+                kmeans = KMeans(n_clusters=args.num_cluster, random_state=0, n_init='auto').fit(emb.detach().cpu().numpy()) ## FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
                 ss_label = kmeans.labels_
                 cluster_info = [list(np.where(ss_label==i)[0]) for i in range(args.num_cluster)]
         
