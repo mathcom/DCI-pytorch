@@ -7,3 +7,4 @@ dependencies:
   - pytorch::pytorch=1.12.*=*cuda*
   - pytorch::torchvision
   - scikit-learn
+  - jupyter
